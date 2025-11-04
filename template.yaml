@@ -1,0 +1,40 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Vehicle Storage Matcher Serverless Function
+
+Globals:
+  Function:
+    Timeout: 30
+    MemorySize: 512
+    Runtime: java17
+
+Resources:
+  VehicleStorageFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: vehicle-storage-matcher
+      Handler: com.vehiclesearch.lambda.StreamLambdaHandler::handleRequest
+      CodeUri: target/vehicle-storage-matcher-1.0.0-aws.jar
+      Description: Matches vehicles to storage spaces using bin packing algorithm
+      Environment:
+        Variables:
+          SPRING_PROFILES_ACTIVE: lambda
+      Events:
+        MatchVehicles:
+          Type: Api
+          Properties:
+            Path: /api/storage/match
+            Method: POST
+        HealthCheck:
+          Type: Api
+          Properties:
+            Path: /api/storage/health
+            Method: GET
+
+Outputs:
+  VehicleStorageApi:
+    Description: "API Gateway endpoint URL for Vehicle Storage Matcher"
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/api/storage/match"
+  VehicleStorageFunctionArn:
+    Description: "Vehicle Storage Matcher Lambda Function ARN"
+    Value: !GetAtt VehicleStorageFunction.Arn

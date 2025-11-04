@@ -1,0 +1,82 @@
+[
+  {
+    "id": "space-001",
+    "type": "garage",
+    "length": 20.0,
+    "width": 10.0,
+    "height": 8.0,
+    "pricePerMonth": 150.0,
+    "location": "Downtown",
+    "features": ["covered", "secure"]
+  },
+  {
+    "id": "space-002",
+    "type": "parking_lot",
+    "length": 18.0,
+    "width": 9.0,
+    "height": 7.0,
+    "pricePerMonth": 100.0,
+    "location": "Midtown",
+    "features": ["outdoor", "24/7 access"]
+  },
+  {
+    "id": "space-003",
+    "type": "warehouse",
+    "length": 25.0,
+    "width": 12.0,
+    "height": 10.0,
+    "pricePerMonth": 200.0,
+    "location": "Industrial District",
+    "features": ["covered", "secure", "climate-controlled"]
+  },
+  {
+    "id": "space-004",
+    "type": "garage",
+    "length": 22.0,
+    "width": 11.0,
+    "height": 9.0,
+    "pricePerMonth": 175.0,
+    "location": "Uptown",
+    "features": ["covered", "secure", "electric charging"]
+  },
+  {
+    "id": "space-005",
+    "type": "parking_lot",
+    "length": 16.0,
+    "width": 8.0,
+    "height": 6.0,
+    "pricePerMonth": 80.0,
+    "location": "Suburb",
+    "features": ["outdoor"]
+  },
+  {
+    "id": "space-006",
+    "type": "garage",
+    "length": 15.0,
+    "width": 7.5,
+    "height": 6.5,
+    "pricePerMonth": 90.0,
+    "location": "East Side",
+    "features": ["covered"]
+  },
+  {
+    "id": "space-007",
+    "type": "warehouse",
+    "length": 30.0,
+    "width": 15.0,
+    "height": 12.0,
+    "pricePerMonth": 250.0,
+    "location": "Port Area",
+    "features": ["covered", "secure", "climate-controlled", "loading dock"]
+  },
+  {
+    "id": "space-008",
+    "type": "parking_lot",
+    "length": 19.0,
+    "width": 9.5,
+    "height": 7.5,
+    "pricePerMonth": 110.0,
+    "location": "Downtown",
+    "features": ["outdoor", "security cameras"]
+  }
+]

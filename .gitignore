@@ -1,0 +1,29 @@
+# Exclude build artifacts and dependencies
+target/
+.mvn/
+mvn*
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+.classpath
+.project
+.settings/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+/tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
