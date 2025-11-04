@@ -114,10 +114,17 @@ public class StorageSpace {
     }
     
     public double getVolume() {
+        if (length == null || width == null || height == null) {
+            return 0.0;
+        }
         return length * width * height;
     }
     
     public boolean canFit(Vehicle vehicle) {
+        if (vehicle == null || this.length == null || this.width == null || this.height == null
+            || vehicle.getLength() == null || vehicle.getWidth() == null || vehicle.getHeight() == null) {
+            return false;
+        }
         return this.length >= vehicle.getLength() 
             && this.width >= vehicle.getWidth() 
             && this.height >= vehicle.getHeight();

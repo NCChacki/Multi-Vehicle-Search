@@ -82,6 +82,9 @@ public class Vehicle {
     }
     
     public double getVolume() {
+        if (length == null || width == null || height == null) {
+            return 0.0;
+        }
         return length * width * height;
     }
     
